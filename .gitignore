@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+/.idea
+/.vscode
+.DS_Store
+coverage.out
+nsq_handler/IOSAuthKey.p8
+cover.out
+coverage.xml
+coverage.html
