@@ -1,16 +1,17 @@
-package main
+package pkg
 
 import (
 	"log"
-	conf "tigerhall-kittens-app/config"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/messaging"
-	"tigerhall-kittens-app/pkg/repository"
-	"tigerhall-kittens-app/pkg/server"
-	"tigerhall-kittens-app/pkg/service"
+
+	conf "github.com/tigerhall-kittens/config"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/messaging"
+	"github.com/tigerhall-kittens/pkg/repository"
+	"github.com/tigerhall-kittens/pkg/server"
+	"github.com/tigerhall-kittens/pkg/service"
 )
 
-func initializeService(config *conf.Config) (service.TigerService, error) {
+func InitializeService(config *conf.Config) (service.TigerService, error) {
 	// Initialize the database connection
 	dbConnectionString := conf.BuildDBConnectionString(config.Database)
 
@@ -42,7 +43,7 @@ func main() {
 	}
 
 	// Initialize the service
-	service, err := initializeService(config)
+	service, err := InitializeService(config)
 	if err != nil {
 		log.Fatalf("Failed to initialize the service: %v", err)
 	}

@@ -6,9 +6,9 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/stretchr/testify/assert"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/models"
-	"tigerhall-kittens-app/pkg/server"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/models"
+	"github.com/tigerhall-kittens/pkg/server"
 )
 
 // mockTigerService is a mock implementation of the TigerService interface.

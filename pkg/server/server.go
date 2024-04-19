@@ -6,10 +6,10 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/handlers"
-	"tigerhall-kittens-app/pkg/middleware"
-	"tigerhall-kittens-app/pkg/service"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/handlers"
+	"github.com/tigerhall-kittens/pkg/middleware"
+	"github.com/tigerhall-kittens/pkg/service"
 )
 
 type server struct {

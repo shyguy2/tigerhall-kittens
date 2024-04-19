@@ -3,7 +3,8 @@ package store
 import (
 	"database/sql"
 	"fmt"
-	"tigerhall-kittens-app/pkg/models"
+
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 type postgresRepository struct {

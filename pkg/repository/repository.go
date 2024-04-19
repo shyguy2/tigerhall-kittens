@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"tigerhall-kittens-app/pkg/models"
-	"tigerhall-kittens-app/pkg/repository/store"
+	"github.com/tigerhall-kittens/pkg/models"
+	"github.com/tigerhall-kittens/pkg/repository/store"
 )
 
 type TigerRepository interface {

@@ -16,10 +16,10 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/models"
-	"tigerhall-kittens-app/pkg/service"
-	"tigerhall-kittens-app/pkg/utils"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/models"
+	"github.com/tigerhall-kittens/pkg/service"
+	"github.com/tigerhall-kittens/pkg/utils"
 )
 
 const DefaultPageSize = 10

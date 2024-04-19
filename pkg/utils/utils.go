@@ -8,8 +8,8 @@ import (
 	"net/http"
 
 	"github.com/disintegration/imaging"
+	"github.com/tigerhall-kittens/pkg/models"
 	"github.com/umahmood/haversine"
-	"tigerhall-kittens-app/pkg/models"
 )
 
 type EmailTemplate struct {

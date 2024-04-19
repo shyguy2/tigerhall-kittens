@@ -6,7 +6,7 @@ import (
 
 	"github.com/DATA-DOG/go-sqlmock"
 	"github.com/stretchr/testify/assert"
-	"tigerhall-kittens-app/pkg/models"
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 func TestPostgresRepository_CreateUser(t *testing.T) {

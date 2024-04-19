@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/models"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 // mockTigerRepo is a mock implementation of the TigerRepository interface.

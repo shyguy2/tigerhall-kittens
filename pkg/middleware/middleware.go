@@ -4,7 +4,8 @@ import (
 	"context"
 	"net/http"
 	"strings"
-	"tigerhall-kittens-app/pkg/auth"
+
+	"github.com/tigerhall-kittens/pkg/auth"
 )
 
 func AuthMiddleware(auth *auth.Auth, next http.Handler) http.Handler {

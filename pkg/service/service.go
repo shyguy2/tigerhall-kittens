@@ -6,11 +6,11 @@ import (
 	"log"
 	"sort"
 
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/messaging"
-	"tigerhall-kittens-app/pkg/models"
-	"tigerhall-kittens-app/pkg/repository"
-	"tigerhall-kittens-app/pkg/utils"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/messaging"
+	"github.com/tigerhall-kittens/pkg/models"
+	"github.com/tigerhall-kittens/pkg/repository"
+	"github.com/tigerhall-kittens/pkg/utils"
 )
 
 type service struct {

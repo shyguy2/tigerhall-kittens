@@ -2,13 +2,14 @@ package auth
 
 import (
 	"context"
-	"golang.org/x/crypto/bcrypt"
 	"testing"
 	"time"
 
+	"golang.org/x/crypto/bcrypt"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/stretchr/testify/assert"
-	"tigerhall-kittens-app/pkg/models"
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 func TestGenerateToken(t *testing.T) {

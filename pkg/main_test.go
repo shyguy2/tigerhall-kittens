@@ -1,8 +1,9 @@
-package main
+package pkg
 
 import (
 	"testing"
-	conf "tigerhall-kittens-app/config"
+
+	conf "github.com/tigerhall-kittens/config"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -29,7 +30,7 @@ func TestInitializeService(t *testing.T) {
 		},
 	}
 
-	_, err := initializeService(config)
+	_, err := InitializeService(config)
 
 	// Assert that the service is initialized without errors
 	assert.Error(t, err)

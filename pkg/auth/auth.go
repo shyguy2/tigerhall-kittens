@@ -4,9 +4,10 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"golang.org/x/crypto/bcrypt"
-	"tigerhall-kittens-app/pkg/models"
 	"time"
+
+	"github.com/tigerhall-kittens/pkg/models"
+	"golang.org/x/crypto/bcrypt"
 
 	"github.com/dgrijalva/jwt-go"
 )

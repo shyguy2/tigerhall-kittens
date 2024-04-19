@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"tigerhall-kittens-app/pkg/models"
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 func TestGetMails(t *testing.T) {

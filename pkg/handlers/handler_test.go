@@ -5,17 +5,18 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"github.com/gorilla/mux"
-	"github.com/stretchr/testify/assert"
 	"log"
 	"mime/multipart"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
 	"testing"
-	"tigerhall-kittens-app/pkg/auth"
-	"tigerhall-kittens-app/pkg/models"
 	"time"
+
+	"github.com/gorilla/mux"
+	"github.com/stretchr/testify/assert"
+	"github.com/tigerhall-kittens/pkg/auth"
+	"github.com/tigerhall-kittens/pkg/models"
 )
 
 // mockTigerService is a mock implementation of the TigerService interface.
