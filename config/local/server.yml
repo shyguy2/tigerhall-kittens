@@ -1,0 +1,17 @@
+database:
+  username: postgres
+  password: postgres
+  dbname: tiger_hall
+  host: localhost
+  port: 5432
+  sslmode: disable
+
+jwt:
+  secret_key: your-jwt-secret-key
+
+rabbitmq:
+  amqpURL: "amqp://guest:guest@localhost:5672/"
+  queueName: "tiger_sighting_queue"
+
+server:
+  port: 8080

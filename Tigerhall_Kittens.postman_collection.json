@@ -1,0 +1,510 @@
+{
+	"info": {
+		"_postman_id": "ce6e6e9a-85d4-4023-bb2f-b65f360485ad",
+		"name": "Tigerhall_Kittens",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16771929"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ajay\",\n    \"email\": \"ajay.yadav@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Apr 2024 05:36:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ajay.yadav@gmail.com\",\n    \"password\": \"passwor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 29 Jul 2024 21:55:23 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						}
+					],
+					"cookie": [],
+					"body": "Invalid email or password\n"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ajay.yadav@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 29 Jul 2024 22:05:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA3NTQ3MjUsInVzZXJuYW1lIjoicmFqbmlzaCJ9.XfwZYxHtNob6eQM-ORnqF-9hGgtifpSZdksZOENPMtQ\"}\n"
+				}
+			]
+		},
+		{
+			"name": "createTiger",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "createTiger",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA3NTQ3MjUsInVzZXJuYW1lIjoicmFqbmlzaCJ9.XfwZYxHtNob6eQM-ORnqF-9hGgtifpSZdksZOENPMtQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"indian_tiger\",\n    \"date_of_birth\": \"2009-11-13T10:39:35Z\",\n    \"last_seen\":\"2009-11-13T10:39:35Z\",\n    \"coordinates\":{\n        \"lat\": 73.09,\n        \"long\": 27.18\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tiger/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tiger",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 30 Jul 2024 06:01:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "tiger-sighting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA3NTQ3MjUsInVzZXJuYW1lIjoicmFqbmlzaCJ9.XfwZYxHtNob6eQM-ORnqF-9hGgtifpSZdksZOENPMtQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tigerID",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "timestamp",
+							"value": "2022-01-01T12:00:00Z",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "40.7128",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "-74.0060",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "tiger.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/tiger-sighting/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tiger-sighting",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "tiger-sighting",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJham5pc2gua3VtYXI0NDhAZ21haWwuY29tIiwiZXhwIjoxNjkxMzk3Njc3LCJ1c2VybmFtZSI6InJham5pc2gifQ.DYnIf4Rw9wLm3a65AD1sZqYInOZuvTzSrwj0zI9-d3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tigerID",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "45.889323",
+									"type": "text"
+								},
+								{
+									"key": "long",
+									"value": "90.521989",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "tiger.jpeg"
+								},
+								{
+									"key": "timestamp",
+									"value": "2024-18-31T10:39:35Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/tiger-sighting/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tiger-sighting",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Apr 2024 08:43:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "tigerSights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tiger/1/sightings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tiger",
+						"1",
+						"sightings"
+					],
+					"query": [
+						{
+							"key": "t",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "tigerSights",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tiger/:id/sightings?page=1&pageSize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tiger",
+								":id",
+								"sightings"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Apr 2024 08:37:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "476"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page\": 1,\n    \"pageSize\": 2,\n    \"tigerSightings\": [\n        {\n            \"id\": 4,\n            \"tigerID\": 1,\n            \"timestamp\": \"2024-07-31T12:00:00Z\",\n            \"lat\": 25.889323,\n            \"long\": 86.521908,\n            \"imageFile\": \"1_25.889323_86.521908_ajay.yadav@gmail.com.jpeg\",\n            \"reporterEmail\": \"ajay.yadav@gmail.com\"\n        },\n        {\n            \"id\": 5,\n            \"tigerID\": 1,\n            \"timestamp\": \"2024-07-31T12:00:00Z\",\n            \"lat\": 53.889323,\n            \"long\": 86.521989,\n            \"imageFile\": \"1_53.889323_86.521989_ajay.yadav@gmail.com.jpeg\",\n            \"reporterEmail\": \"ajay.yadav@gmail.com\"\n        }\n    ],\n    \"totalCount\": 2,\n    \"totalPages\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "tigers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "tigers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tigers?page=2&pageSize=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tigers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 05 Apr 2024 11:28:15 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page\": 2,\n    \"pageSize\": 3,\n    \"tigerList\": [\n        {\n            \"id\": 4,\n            \"name\": \"bihar_tiger\",\n            \"date_of_birth\": \"2024-01-30T00:00:00Z\",\n            \"last_seen\": \"2024-18-31T10:39:35Z\",\n            \"lat\": 0,\n            \"long\": 0\n        }\n    ],\n    \"totalCount\": 4,\n    \"totalPages\": 2\n}"
+				}
+			]
+		}
+	]
+}

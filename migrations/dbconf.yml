@@ -1,0 +1,4 @@
+development:
+  driver: postgres
+  open: postgres://postgres:postgres@localhost:5432/tiger_hall?sslmode=disable
+  import: github.com/lib/pq
