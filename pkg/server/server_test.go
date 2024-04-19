@@ -21,6 +21,14 @@ type mockTigerService struct {
 	getAllTigerSightingsService func(tigerID int) ([]*models.TigerSighting, error)
 }
 
+func (m *mockTigerService) GetAllTigersService(page, size int) ([]*models.Tiger, int, error) {
+	return []*models.Tiger{}, 0, nil
+}
+
+func (m *mockTigerService) GetTigerSightingsByIDService(tigerID, page, pageSize int) ([]*models.TigerSighting, int, error) {
+	return []*models.TigerSighting{}, 0, nil
+}
+
 func (m *mockTigerService) SignupService(user *models.User) error {
 	return m.signupService(user)
 }
@@ -31,10 +39,6 @@ func (m *mockTigerService) LoginService(credentials models.LoginCredentials) (*m
 
 func (m *mockTigerService) CreateTigerService(tiger models.Tiger) error {
 	return m.createTigerService(tiger)
-}
-
-func (m *mockTigerService) GetAllTigersService() ([]*models.Tiger, error) {
-	return m.getAllTigersService()
 }
 
 func (m *mockTigerService) CreateTigerSightingService(newSighting *models.TigerSighting) error {
