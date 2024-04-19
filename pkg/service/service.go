@@ -44,6 +44,7 @@ func (s service) SignupService(user *models.User) error {
 
 	// Create the user in the database
 	if err := s.TigerRepo.CreateUser(user); err != nil {
+		log.Println("error on DB user create " + err.Error())
 		return errors.New("failed to create user")
 	}
 	return err
@@ -110,7 +111,7 @@ func (s service) CreateTigerSightingService(newSighting *models.TigerSighting) e
 	// Create the tiger sighting in the database
 	err = s.TigerRepo.CreateTigerSighting(newSighting)
 	if err != nil {
-		return errors.New("failed to create tiger sighting")
+		return errors.New("failed to create tiger sighting,err:" + err.Error())
 	}
 
 	previousSightings, err := s.TigerRepo.GetTigerSightingsByID(newSighting.TigerID)

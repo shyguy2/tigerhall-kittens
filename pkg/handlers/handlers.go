@@ -204,6 +204,7 @@ func (h *handlers) CreateTigerSightingHandler(w http.ResponseWriter, r *http.Req
 	newSighting.Image = resizedImage
 	err = h.TigerService.CreateTigerSightingService(&newSighting)
 	if err != nil {
+		log.Println("[error] CreateTigerSightingService " + err.Error())
 		utils.RespondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
