@@ -57,7 +57,7 @@ func (p *postgresRepository) GetAllTigersWithPagination(page, pageSize int) ([]*
 	}
 	defer rows.Close()
 
-	tigers := []*models.Tiger{}
+	var tigers []*models.Tiger
 	for rows.Next() {
 		tiger := &models.Tiger{}
 		err := rows.Scan(&tiger.ID, &tiger.Name, &tiger.DateOfBirth, &tiger.LastSeen, &tiger.Lat, &tiger.Long)
@@ -132,7 +132,7 @@ func (p *postgresRepository) GetTigerSightingsByID(tigerID int) ([]*models.Tiger
 	}
 	defer rows.Close()
 
-	sightings := []*models.TigerSighting{}
+	var sightings []*models.TigerSighting
 	for rows.Next() {
 		var sighting models.TigerSighting
 		err := rows.Scan(&sighting.ID, &sighting.TigerID, &sighting.Timestamp, &sighting.Lat, &sighting.Long, &sighting.Image, &sighting.ReporterEmail)
@@ -167,7 +167,7 @@ func (p *postgresRepository) GetTigerSightingsByIDWithPagination(tigerID, page, 
 	}
 	defer rows.Close()
 
-	sightings := []*models.TigerSighting{}
+	var sightings []*models.TigerSighting
 	for rows.Next() {
 		var sighting models.TigerSighting
 		err := rows.Scan(&sighting.ID, &sighting.TigerID, &sighting.Timestamp, &sighting.Lat, &sighting.Long, &sighting.Image, &sighting.ReporterEmail)
